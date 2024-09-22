@@ -18,6 +18,8 @@ class PokemonModel {
     
     static let shared = PokemonModel()
     
+    private init() {} 
+    
     class func setup(with pokemonDataUrlString: String) async throws -> Void {
         shared.pokemonRecords = try PokemonService.fetch(fromStringURL: pokemonDataUrlString)
         print("Pokemon records gathered!")
