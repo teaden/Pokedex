@@ -1,5 +1,5 @@
 //
-//  SinglePokemon.swift
+//  SinglePokemonModel.swift
 //  Pokedex
 //
 //  Created by Tyler Eaden on 9/21/24.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SinglePokemon: Codable {
+struct SinglePokemonModel: Codable {
     var id: Int
     var name: String
     var height: Int

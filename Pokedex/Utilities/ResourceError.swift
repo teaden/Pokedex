@@ -8,5 +8,6 @@
 import Foundation
 
 enum ResourceError: Error {
-    case fileNotFound(fileName: String)
+    case invalidURL(identifierString: String)
+    case invalidImageData
 }

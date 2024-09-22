@@ -28,7 +28,7 @@
                 “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1.png”
             ],
             “sprite”: “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/1.gif”,
-            “cry”: “https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/1.ogg”
+            “cry”: “https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_1.wav”
         },
         {
             “id”: 4,
@@ -57,7 +57,7 @@
                 “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/4.png”
             ],
             “sprite”: “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/4.gif”,
-            “cry”: “https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/4.ogg”
+            “cry”: “https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_4.wav”
         },        {
             “id”: 7,
             “name”: "Squirtle",
@@ -85,7 +85,7 @@
                 “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/7.png”
             ],
             “sprite”: “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/7.gif”,
-            “cry”: “https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/7.ogg”
+            “cry”: “https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_7.wav”
         },        {
             “id”: 17,
             “name”: "Pidgeotto",
@@ -114,7 +114,7 @@
                 “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/17.png”
             ],
             “sprite”: “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/17.gif”,
-            “cry”: “https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/17.ogg”
+            “cry”: “https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_17.wav”
         },        {
             “id”: 25,
             “name”: "Pikachu",
@@ -145,7 +145,7 @@
                 “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/25.png”
             ],
             “sprite”: “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/25.gif”,
-            “cry”: “https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/25.ogg”
+            “cry”: “https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_25.wav”
         },        {
             “id”: 94,
             “name”: "Gengar",
@@ -175,7 +175,7 @@
                 “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/94.png”
             ],
             “sprite”: “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/94.gif”,
-            “cry”: “https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/94.ogg”
+            “cry”: “https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_94.wav”
         },        {
             “id”: 101,
             “name”: "Electrode",
@@ -202,7 +202,7 @@
                 “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/101.png”
             ],
             “sprite”: “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/101.gif”,
-            “cry”: “https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/101.ogg”
+            “cry”: “https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_101.wav”
         },        {
             “id”: 149,
             “name”: "Dragonite",
@@ -233,7 +233,7 @@
                 “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/149.png”
             ],
             “sprite”: “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/149.gif”,
-            “cry”: “https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/149.ogg”
+            “cry”: “https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_149.wav”
         },        {
             “id”: 150,
             “name”: "Mewtwo",
@@ -260,7 +260,7 @@
                 “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/150.png”
             ],
             “sprite”: “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/150.gif”,
-            “cry”: “https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/150.ogg”
+            “cry”: “https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_150.wav”
         },        {
             “id”: 151,
             “name”: "Mew",
@@ -289,7 +289,7 @@
                 “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/151.png”
             ],
             “sprite”: “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/151.gif”,
-            “cry”: “https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/151.ogg”
+            “cry”: “https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_151.wav”
         }
     ]
 }
