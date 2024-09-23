@@ -65,14 +65,7 @@ class PokemonModel {
             try UtilityFunctions.convertStringToURL(urlString: $0.sprite)
         }
         
-        // Wraps KingFisher's traditionally completion-based API in modern Swift async/await pattern
-        return await withCheckedContinuation { continuation in
-            let prefetcher = ImagePrefetcher(urls: perPokemonGifUrls, options: nil, progressBlock: nil) { skippedResources, failedResources, completedResources in
-                continuation.resume(returning: ())
-            }
-
-            prefetcher.start()
-        }
+        await GifService.cacheGifs(forUrls: perPokemonGifUrls)
     }
 }
 
