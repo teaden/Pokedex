@@ -15,6 +15,7 @@ class PokemonModel {
     var pokemonRecords: MultiplePokemonModel?
     var perPokemonImageArrays: [[UIImage]]?
     var perPokemonSounds: [AVAudioPlayer]?
+    var maxPokemonTypes: Int?
     
     static let shared = PokemonModel()
     
@@ -22,14 +23,21 @@ class PokemonModel {
     
     class func setup(with pokemonDataUrlString: String) async throws -> Void {
         print("Starting setup...")
+        
         shared.pokemonRecords = try PokemonService.fetch(fromResourceName: pokemonDataUrlString, withExtension: ".json")
         print("Pokemon records gathered!")
+        
         shared.perPokemonImageArrays = try await getPerPokemonImages(multiplePokemon: shared.pokemonRecords!)
         print("Pokemon artwork arrays created!")
+        
         shared.perPokemonSounds = try await getPerPokemonSounds(multiplePokemon: shared.pokemonRecords!)
         print("Pokemon sound files gathered!")
+        
         try await preloadPokemonGifs(multiplePokemon: shared.pokemonRecords!)
         print("Pokemon sprite GIFs pre-fetched!")
+        
+        shared.maxPokemonTypes = getMaxTypesCount(multiplePokemon: shared.pokemonRecords!)
+        print("Largest number of Pokemon types calculated!")
     }
             
     private static func getPerPokemonImages(multiplePokemon: MultiplePokemonModel) async throws -> [[UIImage]] {
@@ -66,6 +74,12 @@ class PokemonModel {
         }
         
         await GifService.cacheGifs(forUrls: perPokemonGifUrls)
+    }
+    
+    private static func getMaxTypesCount(multiplePokemon: MultiplePokemonModel) -> Int {
+        return multiplePokemon.pokemon.reduce(0) { maxCount, pokemon in
+            max(maxCount, pokemon.types.count)
+        }
     }
 }
 
