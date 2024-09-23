@@ -21,7 +21,8 @@ class PokemonModel {
     private init() {} 
     
     class func setup(with pokemonDataUrlString: String) async throws -> Void {
-        shared.pokemonRecords = try PokemonService.fetch(fromStringURL: pokemonDataUrlString)
+        print("Starting setup...")
+        shared.pokemonRecords = try PokemonService.fetch(fromResourceName: pokemonDataUrlString, withExtension: ".json")
         print("Pokemon records gathered!")
         shared.perPokemonImageArrays = try await getPerPokemonImages(multiplePokemon: shared.pokemonRecords!)
         print("Pokemon artwork arrays created!")

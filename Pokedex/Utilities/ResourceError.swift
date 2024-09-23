@@ -10,4 +10,6 @@ import Foundation
 enum ResourceError: Error {
     case invalidURL(identifierString: String)
     case invalidImageData
+    case noImageInAssets
+    case imageViewUnavailable
 }

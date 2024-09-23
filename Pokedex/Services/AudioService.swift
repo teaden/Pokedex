@@ -8,7 +8,7 @@
 import Foundation
 import AVFAudio
 
-class AudioService: RemoteServiceProtocol {
+class AudioService: RemoteServiceProtocol, LocalServiceProtocol {
     typealias ResultType = AVAudioPlayer
     
     static func fetchAll(fromStringURLs urlStrings: [String]) async throws -> [AVAudioPlayer] {
@@ -36,6 +36,18 @@ class AudioService: RemoteServiceProtocol {
         let audioURL = try UtilityFunctions.convertStringToURL(urlString: urlString)
         let (audioData, _) = try await UtilityFunctions.getDataFromURL(url: audioURL)
         return try AudioService.convertDataToAudioPlayer(audioData: audioData)
+    }
+    
+    static func fetch(fromResourceName fileName: String, withExtension extensionName: String) throws -> AVAudioPlayer {
+        
+        guard let audioDataURL = Bundle.main.url(forResource: fileName, withExtension: extensionName) else {
+            throw ResourceError.invalidURL(identifierString: fileName)
+        }
+        
+        let audioPlayer = try AVAudioPlayer(contentsOf: audioDataURL)
+        audioPlayer.prepareToPlay()
+        
+        return audioPlayer
     }
     
     private static func convertDataToAudioPlayer(audioData: Data) throws -> AVAudioPlayer {

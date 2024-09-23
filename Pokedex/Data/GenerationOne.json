@@ -1,295 +1,315 @@
 {
-    “pokemon”: [
+    "pokemon":[
         {
-            “id”: 1,
-            “name”: "Bulbasaur",
-            “height”: 7,
-            “weight”: 69,
-            “base_experience”: 64,
-            “types”: [
-                “Grass”,
-                “Poison”
+            "id":1,
+            "name":"Bulbasaur",
+            "height":7,
+            "weight":69,
+            "base_experience":64,
+            "types":[
+                "Grass",
+                "Poison"
             ],
-            “abilities”: [
-                “Overgrow”,
-                “Chlorophyll”
+            "abilities":[
+                "Overgrow",
+                "Chlorophyll"
             ],
-            “held_items”: [],
-            “stats”: {
-                ‘hp’: 45,
-                ‘attack’: 49,
-                ‘defense’: 49,
-                ‘special-attack’: 65,
-                ‘special-defense’: 65,
-                ‘speed’: 45
+            "held_items":[
+                
+            ],
+            "stats":{
+                "hp":45,
+                "attack":49,
+                "defense":49,
+                "special-attack":65,
+                "special-defense":65,
+                "speed":45
             },
-            “artwork”: [
-                “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png”,
-                “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1.png”
+            "artwork":[
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1.png"
             ],
-            “sprite”: “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/1.gif”,
-            “cry”: “https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_1.wav”
+            "sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/1.gif",
+            "cry":"https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_1.wav"
         },
         {
-            “id”: 4,
-            “name”: "Charmander",
-            “height”: 6,
-            “weight”: 85,
-            “base_experience”: 62,
-            “types”: [
-                “Fire”
+            "id":4,
+            "name":"Charmander",
+            "height":6,
+            "weight":85,
+            "base_experience":62,
+            "types":[
+                "Fire"
             ],
-            “abilities”: [
-                “Blaze”,
-                “Solar-Power”
+            "abilities":[
+                "Blaze",
+                "Solar-Power"
             ],
-            “held_items”: [],
-            “stats”: {
-                ‘hp’: 39,
-                ‘attack’: 52,
-                ‘defense’: 43,
-                ‘special-attack’: 60,
-                ‘special-defense’: 50,
-                ‘speed’: 65
+            "held_items":[
+                
+            ],
+            "stats":{
+                "hp":39,
+                "attack":52,
+                "defense":43,
+                "special-attack":60,
+                "special-defense":50,
+                "speed":65
             },
-            “artwork”: [
-                “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png”,
-                “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/4.png”
+            "artwork":[
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/4.png"
             ],
-            “sprite”: “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/4.gif”,
-            “cry”: “https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_4.wav”
-        },        {
-            “id”: 7,
-            “name”: "Squirtle",
-            “height”: 5,
-            “weight”: 90,
-            “base_experience”: 63,
-            “types”: [
-                “Water”
+            "sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/4.gif",
+            "cry":"https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_4.wav"
+        },
+        {
+            "id":7,
+            "name":"Squirtle",
+            "height":5,
+            "weight":90,
+            "base_experience":63,
+            "types":[
+                "Water"
             ],
-            “abilities”: [
-                “Torrent”,
-                “Rain-Dish”
+            "abilities":[
+                "Torrent",
+                "Rain-Dish"
             ],
-            “held_items”: [],
-            “stats”: {
-                ‘hp’: 44,
-                ‘attack’: 48,
-                ‘defense’: 65,
-                ‘special-attack’: 50,
-                ‘special-defense’: 64,
-                ‘speed’: 43
+            "held_items":[
+                
+            ],
+            "stats":{
+                "hp":44,
+                "attack":48,
+                "defense":65,
+                "special-attack":50,
+                "special-defense":64,
+                "speed":43
             },
-            “artwork”: [
-                “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png”,
-                “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/7.png”
+            "artwork":[
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/7.png"
             ],
-            “sprite”: “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/7.gif”,
-            “cry”: “https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_7.wav”
-        },        {
-            “id”: 17,
-            “name”: "Pidgeotto",
-            “height”: 11,
-            “weight”: 300,
-            “base_experience”: 122,
-            “types”: [
-                “Normal”,
-                “Flying”
+            "sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/7.gif",
+            "cry":"https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_7.wav"
+        },
+        {
+            "id":17,
+            "name":"Pidgeotto",
+            "height":11,
+            "weight":300,
+            "base_experience":122,
+            "types":[
+                "Normal",
+                "Flying"
             ],
-            “abilities”: [
-                “Tangled-Feet”,
-                “Big-Pecks”
+            "abilities":[
+                "Tangled-Feet",
+                "Big-Pecks"
             ],
-            “held_items”: [],
-            “stats”: {
-                ‘hp’: 63,
-                ‘attack’: 60,
-                ‘defense’: 55,
-                ‘special-attack’: 50,
-                ‘special-defense’: 50,
-                ‘speed’: 71
+            "held_items":[
+                
+            ],
+            "stats":{
+                "hp":63,
+                "attack":60,
+                "defense":55,
+                "special-attack":50,
+                "special-defense":50,
+                "speed":71
             },
-            “artwork”: [
-                “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png”,
-                “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/17.png”
+            "artwork":[
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png",
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/17.png"
             ],
-            “sprite”: “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/17.gif”,
-            “cry”: “https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_17.wav”
-        },        {
-            “id”: 25,
-            “name”: "Pikachu",
-            “height”: 4,
-            “weight”: 60,
-            “base_experience”: 112,
-            “types”: [
-                “Electric”
+            "sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/17.gif",
+            "cry":"https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_17.wav"
+        },
+        {
+            "id":25,
+            "name":"Pikachu",
+            "height":4,
+            "weight":60,
+            "base_experience":112,
+            "types":[
+                "Electric"
             ],
-            “abilities”: [
-                “Static”,
-                “Lightning Rod”
+            "abilities":[
+                "Static",
+                "Lightning Rod"
             ],
-            “held_items”: [
-                “Oran-Berry”,
-                “Light-Ball”
+            "held_items":[
+                "Oran-Berry",
+                "Light-Ball"
             ],
-            “stats”: {
-                ‘hp’: 35,
-                ‘attack’: 55,
-                ‘defense’: 40,
-                ‘special-attack’: 50,
-                ‘special-defense’: 50,
-                ‘speed’: 90
+            "stats":{
+                "hp":35,
+                "attack":55,
+                "defense":40,
+                "special-attack":50,
+                "special-defense":50,
+                "speed":90
             },
-            “artwork”: [
-                “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png”,
-                “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/25.png”
+            "artwork":[
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/25.png"
             ],
-            “sprite”: “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/25.gif”,
-            “cry”: “https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_25.wav”
-        },        {
-            “id”: 94,
-            “name”: "Gengar",
-            “height”: 15,
-            “weight”: 405,
-            “base_experience”: 250,
-            “types”: [
-                “Ghost”,
-                “Poison”
+            "sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/25.gif",
+            "cry":"https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_25.wav"
+        },
+        {
+            "id":94,
+            "name":"Gengar",
+            "height":15,
+            "weight":405,
+            "base_experience":250,
+            "types":[
+                "Ghost",
+                "Poison"
             ],
-            “abilities”: [
-                “Cursed-Body”
+            "abilities":[
+                "Cursed-Body"
             ],
-            “held_items”: [
+            "held_items":[
                 "Spell-Tag"
             ],
-            “stats”: {
-                ‘hp’: 60,
-                ‘attack’: 65,
-                ‘defense’: 60,
-                ‘special-attack’: 130,
-                ‘special-defense’: 75,
-                ‘speed’: 110
+            "stats":{
+                "hp":60,
+                "attack":65,
+                "defense":60,
+                "special-attack":130,
+                "special-defense":75,
+                "speed":110
             },
-            “artwork”: [
-                “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png”,
-                “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/94.png”
+            "artwork":[
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png",
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/94.png"
             ],
-            “sprite”: “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/94.gif”,
-            “cry”: “https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_94.wav”
-        },        {
-            “id”: 101,
-            “name”: "Electrode",
-            “height”: 12,
-            “weight”: 666,
-            “base_experience”: 172,
-            “types”: [
-                “Electric”
+            "sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/94.gif",
+            "cry":"https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_94.wav"
+        },
+        {
+            "id":101,
+            "name":"Electrode",
+            "height":12,
+            "weight":666,
+            "base_experience":172,
+            "types":[
+                "Electric"
             ],
-            “abilities”: [
-                “Static”
+            "abilities":[
+                "Static"
             ],
-            “held_items”: [],
-            “stats”: {
-                ‘hp’: 60,
-                ‘attack’: 50,
-                ‘defense’: 70,
-                ‘special-attack’: 80,
-                ‘special-defense’: 80,
-                ‘speed’: 150
+            "held_items":[
+                
+            ],
+            "stats":{
+                "hp":60,
+                "attack":50,
+                "defense":70,
+                "special-attack":80,
+                "special-defense":80,
+                "speed":150
             },
-            “artwork”: [
-                “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/101.png”,
-                “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/101.png”
+            "artwork":[
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/101.png",
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/101.png"
             ],
-            “sprite”: “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/101.gif”,
-            “cry”: “https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_101.wav”
-        },        {
-            “id”: 149,
-            “name”: "Dragonite",
-            “height”: 22,
-            “weight”: 2100,
-            “base_experience”: 300,
-            “types”: [
-                “Dragon”,
-                “Flying”
+            "sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/101.gif",
+            "cry":"https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_101.wav"
+        },
+        {
+            "id":149,
+            "name":"Dragonite",
+            "height":22,
+            "weight":2100,
+            "base_experience":300,
+            "types":[
+                "Dragon",
+                "Flying"
             ],
-            “abilities”: [
-                “Multiscale”
+            "abilities":[
+                "Multiscale"
             ],
-            “held_items”: [
+            "held_items":[
                 "Dragon-Scale",
                 "Dragon-Fang"
             ],
-            “stats”: {
-                ‘hp’: 91,
-                ‘attack’: 134,
-                ‘defense’: 95,
-                ‘special-attack’: 100,
-                ‘special-defense’: 100,
-                ‘speed’: 80
+            "stats":{
+                "hp":91,
+                "attack":134,
+                "defense":95,
+                "special-attack":100,
+                "special-defense":100,
+                "speed":80
             },
-            “artwork”: [
-                “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/149.png”,
-                “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/149.png”
+            "artwork":[
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/149.png",
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/149.png"
             ],
-            “sprite”: “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/149.gif”,
-            “cry”: “https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_149.wav”
-        },        {
-            “id”: 150,
-            “name”: "Mewtwo",
-            “height”: 20,
-            “weight”: 1220,
-            “base_experience”: 340,
-            “types”: [
-                “Psychic”
+            "sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/149.gif",
+            "cry":"https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_149.wav"
+        },
+        {
+            "id":150,
+            "name":"Mewtwo",
+            "height":20,
+            "weight":1220,
+            "base_experience":340,
+            "types":[
+                "Psychic"
             ],
-            “abilities”: [
-                “Unnerve”
+            "abilities":[
+                "Unnerve"
             ],
-            “held_items”: [],
-            “stats”: {
-                ‘hp’: 106,
-                ‘attack’: 110,
-                ‘defense’: 90,
-                ‘special-attack’: 154,
-                ‘special-defense’: 90,
-                ‘speed’: 130
+            "held_items":[
+                
+            ],
+            "stats":{
+                "hp":106,
+                "attack":110,
+                "defense":90,
+                "special-attack":154,
+                "special-defense":90,
+                "speed":130
             },
-            “artwork”: [
-                “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png”,
-                “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/150.png”
+            "artwork":[
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png",
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/150.png"
             ],
-            “sprite”: “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/150.gif”,
-            “cry”: “https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_150.wav”
-        },        {
-            “id”: 151,
-            “name”: "Mew",
-            “height”: 4,
-            “weight”: 40,
-            “base_experience”: 300,
-            “types”: [
-                “Psychic”
+            "sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/150.gif",
+            "cry":"https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_150.wav"
+        },
+        {
+            "id":151,
+            "name":"Mew",
+            "height":4,
+            "weight":40,
+            "base_experience":300,
+            "types":[
+                "Psychic"
             ],
-            “abilities”: [
-                “Synchronize”
+            "abilities":[
+                "Synchronize"
             ],
-            “held_items”: [
+            "held_items":[
                 "Lum-Berry"
             ],
-            “stats”: {
-                ‘hp’: 100,
-                ‘attack’: 100,
-                ‘defense’: 100,
-                ‘special-attack’: 100,
-                ‘special-defense’: 100,
-                ‘speed’: 100
+            "stats":{
+                "hp":100,
+                "attack":100,
+                "defense":100,
+                "special-attack":100,
+                "special-defense":100,
+                "speed":100
             },
-            “artwork”: [
-                “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png”,
-                “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/151.png”
+            "artwork":[
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png",
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/151.png"
             ],
-            “sprite”: “https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/151.gif”,
-            “cry”: “https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_151.wav”
+            "sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/151.gif",
+            "cry":"https://raw.githubusercontent.com/teaden/Poke-API-WAV-Sounds/main/cries_pokemon_latest_151.wav"
         }
     ]
 }

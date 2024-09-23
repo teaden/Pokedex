@@ -9,5 +9,7 @@ import Foundation
 
 protocol LocalServiceProtocol {
     associatedtype ResultType
-    static func fetch(fromStringURL urlString: String) throws -> ResultType
+    
+    static func fetch(
+        fromResourceName fileName: String, withExtension extensionName: String) throws -> ResultType
 }

@@ -11,7 +11,9 @@ struct SinglePokemonModel: Codable {
     var id: Int
     var name: String
     var height: Int
+    var weight: Int
     var baseExperience: Int
+    var types: [String]
     var abilities: [String]
     var heldItems: [String]
     var stats: [String: Int]

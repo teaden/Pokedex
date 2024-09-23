@@ -9,10 +9,11 @@ import Foundation
 
 class PokemonService: LocalServiceProtocol {
     typealias ResultType = MultiplePokemonModel
-    static func fetch(fromStringURL urlString: String) throws -> MultiplePokemonModel {
+    
+    static func fetch(fromResourceName fileName: String, withExtension extensionName: String) throws -> MultiplePokemonModel {
         
-        guard let jsonDataURL = Bundle.main.url(forResource: urlString, withExtension: ".json") else {
-            throw ResourceError.invalidURL(identifierString: urlString)
+        guard let jsonDataURL = Bundle.main.url(forResource: fileName, withExtension: extensionName) else {
+            throw ResourceError.invalidURL(identifierString: fileName)
         }
         
         return try PokemonDecoder.decode(from: jsonDataURL)

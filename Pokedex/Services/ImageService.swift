@@ -38,6 +38,14 @@ class ImageService: RemoteServiceProtocol {
         return try ImageService.convertDataToImage(imageData: imageData)
     }
     
+    static func fetchFromAssets(fromResourceName fileName: String) throws -> UIImage {
+        guard let image = UIImage(named: fileName) else {
+            throw ResourceError.noImageInAssets
+        }
+        
+        return image
+    }
+    
     private static func convertDataToImage(imageData: Data) throws -> UIImage {
         guard let image = UIImage(data: imageData) else {
             throw ResourceError.invalidImageData
