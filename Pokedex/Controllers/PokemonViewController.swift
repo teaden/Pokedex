@@ -12,75 +12,51 @@ class PokemonViewController: UIViewController, ImageModalDelegate {
 
     var pokemonIndex: Int?
     
-    lazy var currentImageIndex = 0
+    var pokemon: SinglePokemonModel?
+    var artwork: [UIImage] = []
+    var sound: AVAudioPlayer?
     
-    lazy var pokemon: SinglePokemonModel = {
-        guard let index = pokemonIndex, let result = try? PokemonModel.getPokemonByIndex(index: index) else {
-            fatalError("PokemonViewController: Could not retrieve pokemon by index")
-        }
-        return result
-    }()
-
-    lazy var artwork: [UIImage] = {
-        guard let index = pokemonIndex, let result = try? PokemonModel.getAllArtworkByIndex(index: index) else {
-            fatalError("PokemonViewController: Could not retrieve image by index")
-        }
-        return result
-    }()
-
-    lazy var sound: AVAudioPlayer = {
-        guard let index = pokemonIndex, let result = try? PokemonModel.getAudioByIndex(index: index) else {
-            fatalError("PokemonViewController: Could not retrieve audoi by index")
-        }
-        return result
-    }()
-    
-    lazy var timer: Timer = {
-        return Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { [weak self] _ in
-            self?.animateImageTransition()
-        }
-    }()
+    var timer: Timer?
+    var currentImageIndex = 0
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var volumeSlider: UISlider!
     
     @IBAction func tapPlayButton(_ sender: UIButton) {
-        sound.play()
+        sound?.play()
     }
     
     @IBAction func changeVolumeSlider(_ sender: UISlider) {
-        sound.volume = sender.value
+        sound?.volume = sender.value
     }
     
     @IBAction func tapImageView(_ sender: UITapGestureRecognizer) {
-        timer.invalidate()
 
-        // Instantiate the modal view controller
-        guard let imageModalVC = storyboard?.instantiateViewController(withIdentifier: "ImageModalViewController") as? ImageModalViewController else {
-            return // Handle error if needed
+        if let imageModalVC = storyboard?.instantiateViewController(withIdentifier: "ImageModalViewController") as? ImageModalViewController {
+            
+            imageModalVC.delegate = self
+            imageModalVC.image = imageView.image
+            present(imageModalVC, animated: true)
         }
-
-        // Set the delegate
-        imageModalVC.delegate = self
-
-        // Pass the image to the modal
-        imageModalVC.image = imageView.image
-
-        // Present the modal
-        present(imageModalVC, animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let index = pokemonIndex {
+            pokemon = try? PokemonModel.getPokemonByIndex(index: index)
+            artwork = (try? PokemonModel.getAllArtworkByIndex(index: index)) ?? []
+            sound = try? PokemonModel.getAudioByIndex(index: index)
+        }
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapImageView(_:)))
     
         imageView.addGestureRecognizer(tapGesture)
         imageView.isUserInteractionEnabled = true
-        imageView.image = artwork[0]
-        self.setupAudioPlayer()
+        imageView.image = artwork.first
         
-        // Start the timer
+        self.setupAudioPlayer()
         self.startImageCycling()
     }
     
@@ -89,13 +65,16 @@ class PokemonViewController: UIViewController, ImageModalDelegate {
     }
         
     func startImageCycling() {
-        timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { [weak self] _ in
+        stopImageCycling()
+        
+        self.timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { [weak self] _ in
             self?.animateImageTransition()
         }
     }
     
     func stopImageCycling() {
-        
+        self.timer?.invalidate()
+        self.timer = nil
     }
     
     func animateImageTransition() {
@@ -114,10 +93,10 @@ class PokemonViewController: UIViewController, ImageModalDelegate {
     
     private func setupAudioPlayer() {
   
-        sound.volume = volumeSlider.value
+        sound?.volume = volumeSlider.value
         
         volumeSlider.minimumValue = 0.0
         volumeSlider.maximumValue = 1.0
-        volumeSlider.value = sound.volume
+        volumeSlider.value = sound?.volume ?? 0.5
     }
 }

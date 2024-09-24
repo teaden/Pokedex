@@ -12,13 +12,16 @@ class ImageModalViewController: UIViewController, UIScrollViewDelegate {
     weak var delegate: ImageModalDelegate?
     var image: UIImage?
 
-    @IBOutlet weak var imageView: UIImageView!
+    lazy private var imageView: UIImageView? = {
+        return UIImageView.init(image: image)
+    }()
+    
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBAction func handleTap(_ sender: UITapGestureRecognizer) {
         let taplocation = sender.location(in: view)
         
-        if !imageView.frame.contains(taplocation) {
+        if !imageView!.frame.contains(taplocation) {
             dismiss(animated: true, completion: nil)
         }
     }
@@ -26,14 +29,13 @@ class ImageModalViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageView.image = image
-        
-        scrollView.delegate = self
-
-        scrollView.minimumZoomScale = 1.0
-        scrollView.maximumZoomScale = 5.0
-        
-        scrollView.contentSize = imageView.bounds.size
+        if let size = self.imageView?.image?.size {
+            self.scrollView.addSubview(self.imageView!)
+            self.scrollView.contentSize = size
+            scrollView.minimumZoomScale = 0.1
+            scrollView.maximumZoomScale = 3.0
+            self.scrollView.delegate = self
+        }
              
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         view.addGestureRecognizer(tapGesture)
