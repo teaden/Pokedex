@@ -24,6 +24,7 @@ class TableViewCellFour: UITableViewCell {
     }
     
     @IBAction func stepperValueChange(_ sender: UIStepper) {
+        updateDetailsLabel()
     }
     
     func configure(with pokemon: SinglePokemonModel) {
