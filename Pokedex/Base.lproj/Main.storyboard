@@ -64,7 +64,7 @@
                                     <color key="baseBackgroundColor" red="0.55872434380000002" green="0.1616766751" blue="0.14507243040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="yU0-NP-LxM" kind="show" id="LZw-yp-McH"/>
+                                    <segue destination="2q7-py-wwR" kind="show" id="KSW-en-s73"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -82,67 +82,63 @@
             </objects>
             <point key="canvasLocation" x="746" y="13"/>
         </scene>
-        <!--Segmented View Controller-->
-        <scene sceneID="oYe-qX-Frb">
+        <!--Segment View Controller-->
+        <scene sceneID="4pr-7I-68M">
             <objects>
-                <viewController id="yU0-NP-LxM" customClass="SegmentedViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lS7-AP-obq">
+                <viewController id="2q7-py-wwR" customClass="SegmentViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LXQ-Sh-9rK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRw-bX-aaG">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTl-5e-Eqt">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <connections>
-                                    <segue destination="gbX-wn-TOy" kind="embed" id="0rh-Tm-A9V"/>
+                                    <segue destination="gbX-wn-TOy" kind="embed" id="Xsf-fI-n4n"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3U-81-aC0">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3EW-nv-MNz">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <connections>
-                                    <segue destination="Lte-eA-XU9" kind="embed" id="RMA-Bj-SsK"/>
+                                    <segue destination="Lte-eA-XU9" kind="embed" id="9ca-Bu-bU0"/>
                                 </connections>
                             </containerView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="v0t-CQ-R9b"/>
+                        <viewLayoutGuide key="safeArea" id="1Q1-69-6xe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="v0t-CQ-R9b" firstAttribute="trailing" secondItem="xRw-bX-aaG" secondAttribute="trailing" id="4zl-xB-VmI"/>
-                            <constraint firstItem="i3U-81-aC0" firstAttribute="top" secondItem="v0t-CQ-R9b" secondAttribute="top" id="6h9-dT-AfA"/>
-                            <constraint firstItem="v0t-CQ-R9b" firstAttribute="bottom" secondItem="xRw-bX-aaG" secondAttribute="bottom" id="F0K-Jn-G9C"/>
-                            <constraint firstItem="v0t-CQ-R9b" firstAttribute="trailing" secondItem="i3U-81-aC0" secondAttribute="trailing" id="Hpa-ei-FFM"/>
-                            <constraint firstItem="v0t-CQ-R9b" firstAttribute="trailing" secondItem="xRw-bX-aaG" secondAttribute="trailing" id="NAm-Ei-0cM"/>
-                            <constraint firstItem="xRw-bX-aaG" firstAttribute="leading" secondItem="v0t-CQ-R9b" secondAttribute="leading" id="b1S-c1-ApB"/>
-                            <constraint firstItem="v0t-CQ-R9b" firstAttribute="bottom" secondItem="xRw-bX-aaG" secondAttribute="bottom" id="fdC-84-TEX"/>
-                            <constraint firstItem="i3U-81-aC0" firstAttribute="leading" secondItem="v0t-CQ-R9b" secondAttribute="leading" id="hFW-aR-Cba"/>
-                            <constraint firstItem="xRw-bX-aaG" firstAttribute="top" secondItem="v0t-CQ-R9b" secondAttribute="top" id="mO6-V7-4zg"/>
-                            <constraint firstItem="v0t-CQ-R9b" firstAttribute="bottom" secondItem="i3U-81-aC0" secondAttribute="bottom" id="mph-LT-tR1"/>
-                            <constraint firstItem="xRw-bX-aaG" firstAttribute="top" secondItem="v0t-CQ-R9b" secondAttribute="top" id="uB7-H8-5rm"/>
-                            <constraint firstItem="xRw-bX-aaG" firstAttribute="leading" secondItem="v0t-CQ-R9b" secondAttribute="leading" id="vUL-6b-Yu4"/>
+                            <constraint firstItem="MTl-5e-Eqt" firstAttribute="bottom" secondItem="1Q1-69-6xe" secondAttribute="bottom" id="2dj-6c-oCi"/>
+                            <constraint firstItem="MTl-5e-Eqt" firstAttribute="trailing" secondItem="1Q1-69-6xe" secondAttribute="trailing" id="4Xb-t3-Hmk"/>
+                            <constraint firstItem="MTl-5e-Eqt" firstAttribute="leading" secondItem="1Q1-69-6xe" secondAttribute="leading" id="576-Bp-rIN"/>
+                            <constraint firstItem="3EW-nv-MNz" firstAttribute="leading" secondItem="1Q1-69-6xe" secondAttribute="leading" id="8GW-s8-4q5"/>
+                            <constraint firstItem="MTl-5e-Eqt" firstAttribute="top" secondItem="1Q1-69-6xe" secondAttribute="top" id="RPI-Bt-ims"/>
+                            <constraint firstItem="3EW-nv-MNz" firstAttribute="trailing" secondItem="1Q1-69-6xe" secondAttribute="trailing" id="pqi-Td-D4g"/>
+                            <constraint firstItem="3EW-nv-MNz" firstAttribute="top" secondItem="1Q1-69-6xe" secondAttribute="top" id="uK7-oQ-ggH"/>
+                            <constraint firstItem="3EW-nv-MNz" firstAttribute="bottom" secondItem="1Q1-69-6xe" secondAttribute="bottom" id="wXT-Xy-fwq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="zaw-qX-cHS">
+                    <navigationItem key="navigationItem" id="9CM-Rg-MoD">
                         <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Vhl-fb-tEY">
-                            <rect key="frame" x="131" y="5.6666666666666679" width="131" height="33"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="gg6-zN-5JN">
+                            <rect key="frame" x="131" y="6" width="131" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Table"/>
                                 <segment title="Photo"/>
                             </segments>
                             <connections>
-                                <action selector="segmentChange:" destination="yU0-NP-LxM" eventType="valueChanged" id="c8V-Th-Ci5"/>
+                                <action selector="changeSegment:" destination="2q7-py-wwR" eventType="valueChanged" id="B8p-qc-kZ7"/>
                             </connections>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionViewContainer" destination="i3U-81-aC0" id="MM1-1r-PSP"/>
-                        <outlet property="tableViewContainer" destination="xRw-bX-aaG" id="CRo-NY-mTi"/>
-                        <outlet property="viewSegmentedControl" destination="Vhl-fb-tEY" id="MyW-s7-b3r"/>
+                        <outlet property="containerCollection" destination="3EW-nv-MNz" id="Kzl-PC-wO3"/>
+                        <outlet property="containerTable" destination="MTl-5e-Eqt" id="b3d-vd-u2y"/>
+                        <outlet property="segmentedControl" destination="gg6-zN-5JN" id="ErP-7i-VdW"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Mg-6x-DhI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ydM-nv-CW8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1639" y="13"/>
+            <point key="canvasLocation" x="1590" y="13"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="dUr-ow-qFB">
