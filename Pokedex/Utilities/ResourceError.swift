@@ -12,5 +12,7 @@ enum ResourceError: Error {
     case invalidImageData
     case noImageInAssets
     case imageViewUnavailable
+    case loadingPokemonBeforeSetup
     case loadingImageBeforeSetup
+    case loadingAudioBeforeSetup
 }

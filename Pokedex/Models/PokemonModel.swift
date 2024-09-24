@@ -15,7 +15,6 @@ class PokemonModel {
     var pokemonRecords: MultiplePokemonModel?
     var perPokemonImageArrays: [[UIImage]]?
     var perPokemonSounds: [AVAudioPlayer]?
-    var maxPokemonTypes: Int?
     
     static let shared = PokemonModel()
     
@@ -36,8 +35,23 @@ class PokemonModel {
         try await preloadPokemonGifs(multiplePokemon: shared.pokemonRecords!)
         print("Pokemon sprite GIFs pre-fetched!")
         
-        shared.maxPokemonTypes = getMaxTypesCount(multiplePokemon: shared.pokemonRecords!)
         print("Largest number of Pokemon types calculated!")
+    }
+    
+    class func getPokemonByIndex(index idx: Int) throws -> SinglePokemonModel {
+        guard let pokemonMultiple = shared.pokemonRecords?.pokemon else {
+            throw ResourceError.loadingPokemonBeforeSetup
+        }
+        
+        return pokemonMultiple[idx]
+    }
+    
+    class func getAllArtworkByIndex(index idx: Int) throws -> [UIImage] {
+        guard let pokemonImages = shared.perPokemonImageArrays else {
+            throw ResourceError.loadingImageBeforeSetup
+        }
+        
+        return pokemonImages[idx]
     }
     
     class func getArtworkByIndex(index idx: Int) throws -> UIImage {
@@ -46,6 +60,14 @@ class PokemonModel {
         }
         
         return pokemonImages[idx][0]
+    }
+    
+    class func getAudioByIndex(index idx: Int) throws -> AVAudioPlayer {
+        guard let pokemonSounds = shared.perPokemonSounds else {
+            throw ResourceError.loadingAudioBeforeSetup
+        }
+        
+        return pokemonSounds[idx]
     }
             
     private static func getPerPokemonImages(multiplePokemon: MultiplePokemonModel) async throws -> [[UIImage]] {
@@ -82,12 +104,6 @@ class PokemonModel {
         }
         
         await GifService.cacheGifs(forUrls: perPokemonGifUrls)
-    }
-    
-    private static func getMaxTypesCount(multiplePokemon: MultiplePokemonModel) -> Int {
-        return multiplePokemon.pokemon.reduce(0) { maxCount, pokemon in
-            max(maxCount, pokemon.types.count)
-        }
     }
 }
 

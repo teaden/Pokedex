@@ -184,6 +184,7 @@
                                 </collectionViewCellContentView>
                                 <connections>
                                     <outlet property="imageView" destination="ewq-5m-Chc" id="VwG-5S-cOE"/>
+                                    <segue destination="q9P-gD-kej" kind="show" identifier="showPokemonDetails" id="R8Y-5x-B7S"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -238,6 +239,7 @@
                                     <outlet property="detailsLabel" destination="Rlh-LI-AD4" id="afU-0U-wCQ"/>
                                     <outlet property="mainLabel" destination="xYK-6s-l5o" id="MAM-kc-ooR"/>
                                     <outlet property="pokemonImageView" destination="Nz3-dA-7ms" id="OFN-Hl-bfq"/>
+                                    <segue destination="q9P-gD-kej" kind="show" identifier="showPokemonDetails" id="LR5-Hp-Ifp"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TypeTwoId" id="xb6-nP-y7v" customClass="TableViewCellTwo" customModule="Pokedex" customModuleProvider="target">
@@ -279,6 +281,7 @@
                                     <outlet property="detailsSwitch" destination="o1S-qU-r8t" id="ocR-nB-Mql"/>
                                     <outlet property="mainLabel" destination="Dpw-9Q-kcg" id="Qsz-sd-8W0"/>
                                     <outlet property="pokemonImageView" destination="CVX-ty-PTX" id="S4p-XF-uEn"/>
+                                    <segue destination="q9P-gD-kej" kind="show" identifier="showPokemonDetails" id="yjG-Qs-gmM"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TypeThreeId" id="nul-JM-fBW" customClass="TableViewCellThree" customModule="Pokedex" customModuleProvider="target">
@@ -320,6 +323,7 @@
                                     <outlet property="mainLabel" destination="5XM-Wu-3PQ" id="yZT-N1-L00"/>
                                     <outlet property="pokemonImageView" destination="1xn-rY-jaT" id="UaQ-Sy-6fW"/>
                                     <outlet property="typeStepper" destination="21s-dJ-agK" id="chf-M1-yIu"/>
+                                    <segue destination="q9P-gD-kej" kind="show" identifier="showPokemonDetails" id="qg1-3l-XPQ"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TypeFourId" id="wUB-N9-2rj" customClass="TableViewCellFour" customModule="Pokedex" customModuleProvider="target">
@@ -369,6 +373,7 @@
                                     <outlet property="mainLabel" destination="Yc3-dy-2Uc" id="UrB-IJ-wzh"/>
                                     <outlet property="pokemonImageView" destination="yYg-wB-G3g" id="Hk2-Lc-GJb"/>
                                     <outlet property="typeStepper" destination="n8w-Ri-9v1" id="9jB-BQ-DJ6"/>
+                                    <segue destination="q9P-gD-kej" kind="show" identifier="showPokemonDetails" id="ahB-u7-Jg6"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -382,6 +387,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3C-1s-N2C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2531" y="-439"/>
+        </scene>
+        <!--Pokemon View Controller-->
+        <scene sceneID="GGT-ve-cWh">
+            <objects>
+                <viewController storyboardIdentifier="PokemonViewController" id="q9P-gD-kej" customClass="PokemonViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nIA-uc-FSO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="705"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Zn-29-q2M">
+                                <rect key="frame" x="132" y="219" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="CRE-GS-1WE">
+                                <rect key="frame" x="167" y="372" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="changeVolumeSlider:" destination="q9P-gD-kej" eventType="valueChanged" id="Bfh-j2-UBr"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BlF-o4-cHF">
+                                <rect key="frame" x="104" y="366" width="50" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" image="play.fill" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="tapPlayButton:" destination="q9P-gD-kej" eventType="touchUpInside" id="J3t-u9-Vjl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0So-YL-pAU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NG7-Ve-eYr"/>
+                    <connections>
+                        <outlet property="imageView" destination="7Zn-29-q2M" id="T0v-1y-3i4"/>
+                        <outlet property="playButton" destination="BlF-o4-cHF" id="VaL-uw-yQV"/>
+                        <outlet property="volumeSlider" destination="CRE-GS-1WE" id="iL0-ym-gOL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4YI-wn-xbu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3806.8702290076335" y="-22.183098591549296"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wTR-JC-lyS">
@@ -401,7 +449,11 @@
             <point key="canvasLocation" x="-228" y="13"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="R8Y-5x-B7S"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="play.fill" catalog="system" width="120" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
