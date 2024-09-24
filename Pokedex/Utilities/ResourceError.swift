@@ -12,4 +12,5 @@ enum ResourceError: Error {
     case invalidImageData
     case noImageInAssets
     case imageViewUnavailable
+    case loadingImageBeforeSetup
 }

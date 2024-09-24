@@ -39,6 +39,14 @@ class PokemonModel {
         shared.maxPokemonTypes = getMaxTypesCount(multiplePokemon: shared.pokemonRecords!)
         print("Largest number of Pokemon types calculated!")
     }
+    
+    class func getArtworkByIndex(index idx: Int) throws -> UIImage {
+        guard let pokemonImages = shared.perPokemonImageArrays else {
+            throw ResourceError.loadingImageBeforeSetup
+        }
+        
+        return pokemonImages[idx][0]
+    }
             
     private static func getPerPokemonImages(multiplePokemon: MultiplePokemonModel) async throws -> [[UIImage]] {
         
