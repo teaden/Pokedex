@@ -29,10 +29,4 @@ class GifService {
         let cache = ImageCache.default
         cache.memoryStorage.config.countLimit = numRecords
     }
-    
-
-    
-    
-    
-    
 }

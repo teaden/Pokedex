@@ -12,9 +12,7 @@
             "abilities":[
                 "Leaf-Guard"
             ],
-            "held_items":[
-                "Lum-Berry"
-            ],
+            "held_item":"Lum-Berry",
             "stats":{
                 "hp":45,
                 "attack":49,
@@ -43,9 +41,7 @@
                 "Blaze",
                 "Flash-Fire"
             ],
-            "held_items":[
-                
-            ],
+            "held_item":null,
             "stats":{
                 "hp":39,
                 "attack":52,
@@ -73,9 +69,7 @@
             "abilities":[
                 "Torrent"
             ],
-            "held_items":[
-                
-            ],
+            "held_item":null,
             "stats":{
                 "hp":50,
                 "attack":65,
@@ -104,9 +98,7 @@
                 "Hustle",
                 "Serene-Grace"
             ],
-            "held_items":[
-                
-            ],
+            "held_item":null,
             "stats":{
                 "hp":35,
                 "attack":20,
@@ -136,9 +128,7 @@
                 "Own-Tempo",
                 "Regenerator"
             ],
-            "held_items":[
-                "Kings-Rock"
-            ],
+            "held_item":"Kings-Rock",
             "stats":{
                 "hp":95,
                 "attack":75,
@@ -169,9 +159,7 @@
                 "Sturdy",
                 "Sheer-Force"
             ],
-            "held_items":[
-                "Metal-Coat"
-            ],
+            "held_item":"Metal-Coat",
             "stats":{
                 "hp":75,
                 "attack":85,
@@ -202,9 +190,7 @@
                 "Technician",
                 "Light-Metal"
             ],
-            "held_items":[
-                
-            ],
+            "held_item":null,
             "stats":{
                 "hp":70,
                 "attack":130,
@@ -233,9 +219,7 @@
                 "Pressure",
                 "Inner-Focus"
             ],
-            "held_items":[
-                
-            ],
+            "held_item":null,
             "stats":{
                 "hp":115,
                 "attack":115,
@@ -264,9 +248,7 @@
                 "Sand-Stream",
                 "Unnerve"
             ],
-            "held_items":[
-                
-            ],
+            "held_item":null,
             "stats":{
                 "hp":100,
                 "attack":134,
@@ -296,9 +278,7 @@
                 "Pressure",
                 "Multiscale"
             ],
-            "held_items":[
-                
-            ],
+            "held_item":null,
             "stats":{
                 "hp":106,
                 "attack":90,

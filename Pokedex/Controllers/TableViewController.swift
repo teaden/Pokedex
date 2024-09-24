@@ -31,15 +31,28 @@ class TableViewController: UITableViewController {
         return self.pokemonModel.pokemonRecords!.pokemon.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        let pokemon = self.pokemonModel.pokemonRecords!.pokemon[indexPath.row]
+        
+        switch pokemon.cellType {
+        case .oneTypeNoHeldItem:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TypeOneId", for: indexPath) as! TableViewCellOne
+            cell.configure(with: pokemon)
+            return cell
+        case .oneTypeHeldItem:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TypeTwoId", for: indexPath) as! TableViewCellTwo
+            cell.configure(with: pokemon)
+            return cell
+        case .multipleTypesNoHeldItem:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TypeThreeId", for: indexPath) as! TableViewCellThree
+            cell.configure(with: pokemon)
+            return cell
+        case .multipleTypesHeldItem:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TypeFourId", for: indexPath) as! TableViewCellFour
+            cell.configure(with: pokemon)
+            return cell
+        }
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

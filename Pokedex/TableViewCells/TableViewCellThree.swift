@@ -8,21 +8,33 @@
 import UIKit
 
 class TableViewCellThree: UITableViewCell {
+    
+    var pokemon: SinglePokemonModel?
 
     @IBOutlet weak var pokemonImageView: UIImageView!
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var typeStepper: UIStepper!
     @IBOutlet weak var detailsLabel: UILabel!
+
+    @IBAction func stepperValueChange(_ sender: UIStepper) {
+        updateDetailsLabel()
+    }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func configure(with pokemon: SinglePokemonModel) {
+        self.pokemon = pokemon
+        pokemonImageView.kf.setImage(with: URL(string: pokemon.sprite)!)
+        mainLabel.text = "\(pokemon.id)"
+        
+        typeStepper.minimumValue = 1
+        typeStepper.maximumValue = Double(pokemon.types.count)
+        typeStepper.value = 1
+        
+        updateDetailsLabel()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    private func updateDetailsLabel() {
+        guard let pokemon = pokemon else { return }
+        let numberOfTypes = Int(typeStepper.value)
+        detailsLabel.text = "Types: \(pokemon.types.prefix(numberOfTypes).joined(separator: ", "))"
     }
-
 }

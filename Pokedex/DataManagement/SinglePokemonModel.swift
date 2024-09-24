@@ -15,9 +15,21 @@ struct SinglePokemonModel: Codable {
     var baseExperience: Int
     var types: [String]
     var abilities: [String]
-    var heldItems: [String]
+    var heldItem: String?
     var stats: [String: Int]
     var artwork: [String]
     var sprite: String
     var cry: String
+    
+    var cellType: PokemonCellType {
+        if types.count > 1 && heldItem != nil {
+            return .multipleTypesHeldItem
+        } else if types.count > 1 {
+            return .multipleTypesNoHeldItem
+        } else if heldItem != nil {
+            return .oneTypeHeldItem
+        } else {
+            return .oneTypeNoHeldItem
+        }
+    }
 }

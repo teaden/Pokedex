@@ -12,15 +12,9 @@ class TableViewCellOne: UITableViewCell {
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var detailsLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func configure(with pokemon: SinglePokemonModel) {
+        pokemonImageView.kf.setImage(with: URL(string: pokemon.sprite)!)
+        mainLabel.text = "\(pokemon.id)"
+        detailsLabel.text = "Type: \(pokemon.types[0])"
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

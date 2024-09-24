@@ -8,20 +8,33 @@
 import UIKit
 
 class TableViewCellTwo: UITableViewCell {
+    
+    var pokemon: SinglePokemonModel?
+    
     @IBOutlet weak var pokemonImageView: UIImageView!
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var detailsSwitch: UISwitch!
     @IBOutlet weak var detailsLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBAction func switchToggle(_ sender: UISwitch) {
+        updateDetailsLabel()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    func configure(with pokemon: SinglePokemonModel) {
+        self.pokemon = pokemon
+        pokemonImageView.kf.setImage(with: URL(string: pokemon.sprite)!)
+        mainLabel.text = "\(pokemon.id)"
+        
+        updateDetailsLabel()
+    }
 
-        // Configure the view for the selected state
+    private func updateDetailsLabel() {
+        guard let pokemon = pokemon else { return }
+        if detailsSwitch.isOn {
+            detailsLabel.text = "Held Item: \(pokemon.heldItem ?? "None")"
+        } else {
+            detailsLabel.text = "Type: \(pokemon.types[0])"
+        }
     }
 
 }
