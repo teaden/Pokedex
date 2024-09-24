@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol RemoteServiceProtocol {
+protocol RemoteServiceProtocol: AnyObject {
     associatedtype ResultType
     static func fetchAll(fromStringURLs urlStrings: [String]) async throws -> [ResultType]
     static func fetch(fromStringURL urlString: String) async throws -> ResultType

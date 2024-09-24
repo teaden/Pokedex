@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol LocalServiceProtocol {
+protocol LocalServiceProtocol: AnyObject {
     associatedtype ResultType
     
     static func fetch(

@@ -122,7 +122,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="zaw-qX-cHS">
                         <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Vhl-fb-tEY">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Vhl-fb-tEY">
                             <rect key="frame" x="131" y="5.6666666666666679" width="131" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
@@ -419,6 +419,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0So-YL-pAU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="3Pg-hH-38g" appends="YES" id="iSD-4O-pbM"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="NG7-Ve-eYr"/>
                     <connections>
@@ -428,8 +432,60 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4YI-wn-xbu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3Pg-hH-38g">
+                    <connections>
+                        <action selector="tapImageView:" destination="q9P-gD-kej" id="0iH-fm-ooZ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3806.8702290076335" y="-22.183098591549296"/>
+        </scene>
+        <!--Image Modal View Controller-->
+        <scene sceneID="MQF-bl-YjW">
+            <objects>
+                <viewController storyboardIdentifier="ImageModalViewController" id="PIF-Gf-YWq" customClass="ImageModalViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H79-OJ-VVx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EoY-9B-ros">
+                                <rect key="frame" x="36" y="266" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SPq-EI-kdu">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="SPq-EI-kdu" firstAttribute="leading" secondItem="SYJ-0d-DaD" secondAttribute="leading" id="0XN-yC-TwB"/>
+                                    <constraint firstItem="SPq-EI-kdu" firstAttribute="bottom" secondItem="SYJ-0d-DaD" secondAttribute="bottom" id="53q-Ac-J4P"/>
+                                    <constraint firstItem="SPq-EI-kdu" firstAttribute="trailing" secondItem="SYJ-0d-DaD" secondAttribute="trailing" id="5c4-7e-2t8"/>
+                                    <constraint firstItem="SPq-EI-kdu" firstAttribute="top" secondItem="SYJ-0d-DaD" secondAttribute="top" id="ieP-6p-Kal"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="z8T-6N-92y"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="SYJ-0d-DaD"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xTx-99-vns"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="fFY-0w-Iro" appends="YES" id="Ahn-iA-azD"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="SPq-EI-kdu" id="pvw-cq-CMd"/>
+                        <outlet property="scrollView" destination="EoY-9B-ros" id="Brb-Qy-y3l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cex-kA-ZCW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fFY-0w-Iro">
+                    <connections>
+                        <action selector="handleTap:" destination="PIF-Gf-YWq" id="TQN-9S-AiR"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="4990.0763358778622" y="12.67605633802817"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wTR-JC-lyS">
