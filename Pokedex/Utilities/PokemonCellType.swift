@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Specifies which reusable cell to dequeue and manipulate in TableViewController
 enum PokemonCellType {
     case oneTypeNoHeldItem
     case oneTypeHeldItem

@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// Custom protocol used by PokemonViewController for handling ImageModalViewController
 protocol ImageModalDelegate: UIViewController {
     func dismissModal()
 }

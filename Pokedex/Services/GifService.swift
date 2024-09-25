@@ -8,9 +8,10 @@
 import Foundation
 import Kingfisher
 
+/// Encapsulates functionality for fetching and caching GIFs via network requests using String links
 class GifService {
     
-    // Wraps KingFisher's traditionally completion-based API in modern Swift async/await pattern
+    /// Wraps KingFisher's traditionally completion-based API in modern Swift async/await pattern
     static func cacheGifs(forUrls gifUrls: [URL]) async {
         
         GifService.setupCacheLimits(withLimit: gifUrls.count)
@@ -24,7 +25,7 @@ class GifService {
         }
     }
     
-    // Setup Kingfisher cache limits
+    /// Setup Kingfisher cache limits to ensure cache indices perfectly map to indices of data records in MVC Model state
     private static func setupCacheLimits(withLimit numRecords: Int) {
         let cache = ImageCache.default
         cache.memoryStorage.config.countLimit = numRecords

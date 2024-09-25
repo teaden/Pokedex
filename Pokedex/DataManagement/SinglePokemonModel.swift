@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Maps to one object in array in "pokemon" attribute of JSON files
 struct SinglePokemonModel: Codable {
     var id: Int
     var name: String
@@ -21,6 +22,7 @@ struct SinglePokemonModel: Codable {
     var sprite: String
     var cry: String
     
+    /// Computed property used for conditionally dequeuing dynamic cell prototypes in TableViewController
     var cellType: PokemonCellType {
         if types.count > 1 && heldItem != nil {
             return .multipleTypesHeldItem

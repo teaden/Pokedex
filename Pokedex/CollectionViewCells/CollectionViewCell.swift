@@ -7,8 +7,7 @@
 
 import UIKit
 
+/// UICollectionsViewCell subclass that holds an outlet to an image
 class CollectionViewCell: UICollectionViewCell {
-    
-   
     @IBOutlet weak var imageView: UIImageView!
 }

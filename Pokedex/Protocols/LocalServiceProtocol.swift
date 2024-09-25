@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Custom protocol that classes fetching files from project directory must conform to
 protocol LocalServiceProtocol: AnyObject {
     associatedtype ResultType
     

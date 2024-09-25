@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Custom error cases used to indicate various "fail" scenarios throughout the app
 enum ResourceError: Error {
     case invalidURL(identifierString: String)
     case invalidImageData

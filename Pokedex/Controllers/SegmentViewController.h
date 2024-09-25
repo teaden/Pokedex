@@ -9,12 +9,20 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ * Public interface for SegmentViewController
+ *
+ * SegmentViewController handles swapping between TableView and CollectionView that use same Pokemon records
+ */
 @interface SegmentViewController : UIViewController
 
+// Outlet for the SegmentedControl used for swaps between TableView and CollectionView
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
+// Outlet to UIView container for the TableView
 @property (weak, nonatomic) IBOutlet UIView *containerTable;
 
+// Outlet to UIView container for the collectionView
 @property (weak, nonatomic) IBOutlet UIView *containerCollection;
 
 

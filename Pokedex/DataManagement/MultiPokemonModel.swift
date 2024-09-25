@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Maps to array in "pokemon" attribute of JSON files
 struct MultiplePokemonModel: Codable {
     var pokemon: [SinglePokemonModel]
 }
