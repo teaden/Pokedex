@@ -17,17 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bYF-gY-d6C">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwn-fB-0rS">
+                                <rect key="frame" x="16" y="503" width="361" height="49"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="View Pokédex ">
+                                            <attributes>
+                                                <font key="NSFont" size="22" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.55872434380000002" green="0.1616766751" blue="0.14507243040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="2q7-py-wwR" kind="show" id="KSW-en-s73"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bYF-gY-d6C">
                                 <rect key="frame" x="16" y="261" width="361" height="133"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <pickerView contentMode="top" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SPh-Ld-nhd">
-                                <rect key="frame" x="201" y="402" width="176" height="93"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfH-ch-D8s">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfH-ch-D8s">
                                 <rect key="frame" x="16" y="432" width="183" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
@@ -47,29 +60,129 @@
                                     <action selector="sendChosenGen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="atI-3U-CKb"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwn-fB-0rS">
-                                <rect key="frame" x="16" y="503" width="361" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="View Pokédex ">
-                                            <attributes>
-                                                <font key="NSFont" size="22" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseForegroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="baseBackgroundColor" red="0.55872434380000002" green="0.1616766751" blue="0.14507243040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="2q7-py-wwR" kind="show" id="KSW-en-s73"/>
-                                </connections>
-                            </button>
+                            <pickerView contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="SPh-Ld-nhd">
+                                <rect key="frame" x="201" y="402" width="176" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="8N5-xC-Mg9"/>
+                                    <constraint firstAttribute="height" constant="93" id="SCL-Kt-9qn"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8N5-xC-Mg9"/>
+                                        <exclude reference="SCL-Kt-9qn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="8N5-xC-Mg9"/>
+                                        <include reference="SCL-Kt-9qn"/>
+                                    </mask>
+                                </variation>
+                            </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cfH-ch-D8s" firstAttribute="top" secondItem="bYF-gY-d6C" secondAttribute="bottom" constant="32" id="1zA-LE-gL3"/>
+                            <constraint firstItem="cfH-ch-D8s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="21A-gn-tbM"/>
+                            <constraint firstItem="nwn-fB-0rS" firstAttribute="top" secondItem="SPh-Ld-nhd" secondAttribute="bottom" constant="8" symbolic="YES" id="4tv-ra-WzN"/>
+                            <constraint firstItem="bYF-gY-d6C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="158" id="52A-1t-hIl"/>
+                            <constraint firstItem="bYF-gY-d6C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="187" id="5pP-nE-srR"/>
+                            <constraint firstItem="bYF-gY-d6C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8y1-XN-YJf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cfH-ch-D8s" secondAttribute="trailing" constant="364" id="9Ob-pD-Mvt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bYF-gY-d6C" secondAttribute="trailing" constant="16" id="Chq-5D-eg7"/>
+                            <constraint firstItem="cfH-ch-D8s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="187" id="EZo-sp-Uqf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bYF-gY-d6C" secondAttribute="trailing" constant="186" id="L1x-07-C9T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SPh-Ld-nhd" secondAttribute="trailing" constant="16" id="LDT-qq-7He"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nwn-fB-0rS" secondAttribute="bottom" constant="266" id="Oo9-mO-EX3"/>
+                            <constraint firstItem="SPh-Ld-nhd" firstAttribute="top" secondItem="bYF-gY-d6C" secondAttribute="bottom" constant="-1" id="RcI-mS-bzX"/>
+                            <constraint firstItem="nwn-fB-0rS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="XVL-XI-q2o"/>
+                            <constraint firstItem="SPh-Ld-nhd" firstAttribute="top" secondItem="bYF-gY-d6C" secondAttribute="bottom" constant="8" symbolic="YES" id="YU0-ZV-lIp"/>
+                            <constraint firstItem="nwn-fB-0rS" firstAttribute="top" secondItem="SPh-Ld-nhd" secondAttribute="bottom" constant="8" symbolic="YES" id="YsO-tC-IAZ"/>
+                            <constraint firstItem="SPh-Ld-nhd" firstAttribute="leading" secondItem="cfH-ch-D8s" secondAttribute="trailing" constant="2" id="g1d-Dq-oQR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bYF-gY-d6C" secondAttribute="bottom" constant="424" id="jmd-Wu-fop"/>
+                            <constraint firstItem="nwn-fB-0rS" firstAttribute="top" secondItem="cfH-ch-D8s" secondAttribute="bottom" constant="33" id="kCB-MG-XOE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nwn-fB-0rS" secondAttribute="trailing" constant="16" id="kEw-pD-U42"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SPh-Ld-nhd" secondAttribute="trailing" constant="186" id="l4M-lg-uwy"/>
+                            <constraint firstItem="nwn-fB-0rS" firstAttribute="top" secondItem="bYF-gY-d6C" secondAttribute="bottom" constant="102" id="qPB-VG-x70"/>
+                            <constraint firstItem="cfH-ch-D8s" firstAttribute="top" secondItem="bYF-gY-d6C" secondAttribute="bottom" constant="38" id="qgc-eK-qRF"/>
+                            <constraint firstItem="nwn-fB-0rS" firstAttribute="top" secondItem="cfH-ch-D8s" secondAttribute="bottom" constant="27" id="spU-Pa-Mh9"/>
+                            <constraint firstItem="bYF-gY-d6C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="srx-Iu-KMF"/>
+                            <constraint firstItem="SPh-Ld-nhd" firstAttribute="leading" secondItem="cfH-ch-D8s" secondAttribute="trailing" constant="8" symbolic="YES" id="uka-4s-Lxe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nwn-fB-0rS" secondAttribute="trailing" constant="186" id="v3C-KW-6fL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nwn-fB-0rS" secondAttribute="bottom" constant="48" id="xP3-n0-WHK"/>
+                            <constraint firstItem="nwn-fB-0rS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="187" id="zEY-Vp-yl7"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9Ob-pD-Mvt"/>
+                                <exclude reference="kEw-pD-U42"/>
+                                <exclude reference="v3C-KW-6fL"/>
+                                <exclude reference="LDT-qq-7He"/>
+                                <exclude reference="l4M-lg-uwy"/>
+                                <exclude reference="Chq-5D-eg7"/>
+                                <exclude reference="L1x-07-C9T"/>
+                                <exclude reference="jmd-Wu-fop"/>
+                                <exclude reference="Oo9-mO-EX3"/>
+                                <exclude reference="xP3-n0-WHK"/>
+                                <exclude reference="5pP-nE-srR"/>
+                                <exclude reference="srx-Iu-KMF"/>
+                                <exclude reference="52A-1t-hIl"/>
+                                <exclude reference="8y1-XN-YJf"/>
+                                <exclude reference="21A-gn-tbM"/>
+                                <exclude reference="EZo-sp-Uqf"/>
+                                <exclude reference="1zA-LE-gL3"/>
+                                <exclude reference="qgc-eK-qRF"/>
+                                <exclude reference="XVL-XI-q2o"/>
+                                <exclude reference="zEY-Vp-yl7"/>
+                                <exclude reference="qPB-VG-x70"/>
+                                <exclude reference="kCB-MG-XOE"/>
+                                <exclude reference="spU-Pa-Mh9"/>
+                                <exclude reference="4tv-ra-WzN"/>
+                                <exclude reference="YsO-tC-IAZ"/>
+                                <exclude reference="g1d-Dq-oQR"/>
+                                <exclude reference="uka-4s-Lxe"/>
+                                <exclude reference="RcI-mS-bzX"/>
+                                <exclude reference="YU0-ZV-lIp"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="9Ob-pD-Mvt"/>
+                                <include reference="v3C-KW-6fL"/>
+                                <include reference="l4M-lg-uwy"/>
+                                <include reference="L1x-07-C9T"/>
+                                <include reference="xP3-n0-WHK"/>
+                                <include reference="5pP-nE-srR"/>
+                                <include reference="8y1-XN-YJf"/>
+                                <include reference="EZo-sp-Uqf"/>
+                                <include reference="1zA-LE-gL3"/>
+                                <include reference="zEY-Vp-yl7"/>
+                                <include reference="qPB-VG-x70"/>
+                                <include reference="kCB-MG-XOE"/>
+                                <include reference="4tv-ra-WzN"/>
+                                <include reference="uka-4s-Lxe"/>
+                                <include reference="RcI-mS-bzX"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="kEw-pD-U42"/>
+                                <include reference="LDT-qq-7He"/>
+                                <include reference="Chq-5D-eg7"/>
+                                <include reference="jmd-Wu-fop"/>
+                                <include reference="Oo9-mO-EX3"/>
+                                <include reference="srx-Iu-KMF"/>
+                                <include reference="52A-1t-hIl"/>
+                                <include reference="21A-gn-tbM"/>
+                                <include reference="qgc-eK-qRF"/>
+                                <include reference="XVL-XI-q2o"/>
+                                <include reference="spU-Pa-Mh9"/>
+                                <include reference="YsO-tC-IAZ"/>
+                                <include reference="g1d-Dq-oQR"/>
+                                <include reference="YU0-ZV-lIp"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="E6i-0m-wbJ"/>
                     <connections>
@@ -80,7 +193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="746" y="13"/>
+            <point key="canvasLocation" x="745.77464788732402" y="12.977099236641221"/>
         </scene>
         <!--Segment View Controller-->
         <scene sceneID="4pr-7I-68M">
@@ -145,7 +258,7 @@
             <objects>
                 <collectionViewController id="Lte-eA-XU9" customClass="CollectionViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="GQ2-90-fvY">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="715"/>
+                        <rect key="frame" x="0.0" y="0.0" width="734" height="328"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aun-AJ-XhZ">
@@ -156,10 +269,10 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectCell" id="SLu-CF-y9H" customClass="CollectionViewCell" customModule="Pokedex" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="opY-wl-jab">
-                                    <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ewq-5m-Chc">
@@ -200,15 +313,15 @@
             <objects>
                 <tableViewController id="gbX-wn-TOy" customClass="TableViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="C6h-hQ-Nv5">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="715"/>
+                        <rect key="frame" x="0.0" y="0.0" width="734" height="328"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TypeOneId" id="9CP-Iz-Sbv" customClass="TableViewCellOne" customModule="Pokedex" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="50" width="734" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9CP-Iz-Sbv" id="Lee-NC-ZO6">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="734" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nz3-dA-7ms">
@@ -239,10 +352,10 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TypeTwoId" id="xb6-nP-y7v" customClass="TableViewCellTwo" customModule="Pokedex" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="93.666667938232422" width="393" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="93.666667938232422" width="734" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xb6-nP-y7v" id="q05-ee-kGt">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="734" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CVX-ty-PTX">
@@ -281,10 +394,10 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TypeThreeId" id="nul-JM-fBW" customClass="TableViewCellThree" customModule="Pokedex" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="137.33333587646484" width="393" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="137.33333587646484" width="734" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nul-JM-fBW" id="D9E-bB-dw6">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="734" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1xn-rY-jaT">
@@ -323,10 +436,10 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TypeFourId" id="wUB-N9-2rj" customClass="TableViewCellFour" customModule="Pokedex" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="181.00000381469727" width="393" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="181.00000381469727" width="734" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wUB-N9-2rj" id="aXQ-3V-mPr">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="734" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYg-wB-G3g">
@@ -389,7 +502,7 @@
             <objects>
                 <viewController storyboardIdentifier="PokemonViewController" id="q9P-gD-kej" customClass="PokemonViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nIA-uc-FSO">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="705"/>
+                        <rect key="frame" x="0.0" y="0.0" width="734" height="328"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Zn-29-q2M">
