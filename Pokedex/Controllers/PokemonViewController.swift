@@ -39,6 +39,15 @@ class PokemonViewController: UIViewController, ImageModalDelegate {
     /// The index of the current image in view (i.e., the current image after swap) from the "artwork" array property
     var currentImageIndex = 0
     
+    /// Outlet to label that displays Pokemon name
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    /// Outlet to label that displays Pokemon types
+    @IBOutlet weak var typesLabel: UILabel!
+    
+    /// Outlet to label that displays Pokmen held item
+    @IBOutlet weak var heldItemLabel: UILabel!
+    
     /// Outlet that displays the currently active or selected Pokemon image from the "artwork" property
     @IBOutlet weak var imageView: UIImageView!
     
@@ -79,9 +88,13 @@ class PokemonViewController: UIViewController, ImageModalDelegate {
         /// Pull pokemon record, artwork images, and sound using singleton class PokemonModel class methods and currentIndex
         /// Property currentIndex is supplied via segues by TableViewController and CollectionViewController
         if let index = pokemonIndex {
-            pokemon = try? PokemonModel.getPokemonByIndex(index: index)
-            artwork = (try? PokemonModel.getAllArtworkByIndex(index: index)) ?? []
-            sound = try? PokemonModel.getAudioByIndex(index: index)
+            self.pokemon = try? PokemonModel.getPokemonByIndex(index: index)
+            self.artwork = (try? PokemonModel.getAllArtworkByIndex(index: index)) ?? []
+            self.sound = try? PokemonModel.getAudioByIndex(index: index)
+            
+            nameLabel.text = pokemon?.name
+            typesLabel.text = "Type: \(pokemon?.types.joined(separator: ", ") ?? "Unknown")"
+            heldItemLabel.text = "Held Item: \(pokemon?.heldItem ?? "None")"
         }
         
         /// Make tap gesture that utilizes tapImageView handler
