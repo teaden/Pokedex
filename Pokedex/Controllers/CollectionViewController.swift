@@ -9,7 +9,7 @@ import UIKit
 
 private let reuseIdentifier = "CollectCell"
 
-class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class CollectionViewController: UICollectionViewController {
     
     /// Lazily load singleton class model PokemonModel
     lazy var pokemonModel = PokemonModel.shared
@@ -48,27 +48,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
             fatalError("Could not dequeue cell")
         }
     }
-    
-    // MARK: UICollectionViewDelegateFlowLayout
-    
-    /// Sets padding around section, i.e., the area around all of the cells, for slight spacing between left and right container edges
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        // Custom insets
-        return UIEdgeInsets(top: 0, left: 2, bottom: 0, right: 2)
-    }
-    
-    /// Allow for slight vertical spacing between cells at a minimum
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        // Custom line spacing
-        return 2
-    }
-    
-    /// Allow for slight horizontal spacing between cells at a minimum
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        // Custom inter-item spacing
-        return 2
-    }
-    
+        
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
